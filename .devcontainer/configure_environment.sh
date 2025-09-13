@@ -26,6 +26,7 @@ else
     exit 1
 fi
 
+#echo "Changing ownership of files in workspace to user group..."
 
 user_name="developer"
 group_name="developer"
