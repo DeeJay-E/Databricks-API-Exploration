@@ -1,5 +1,5 @@
 {
-    "name": "practai",
+    "name": "DevContainerTemplate",
     "build": {
         "dockerfile": "Dockerfile"
     },
@@ -16,8 +16,8 @@
     },
     "waitFor": "onCreateCommand",
     "onCreateCommand": "sudo bash .devcontainer/configure_environment.sh",
-    "updateContentCommand": "bash .devcontainer/install-dev-tools.sh",
-    "postAttachCommand": "bash .devcontainer/post_attach.sh",
+    "updateContentCommand": "sudo bash .devcontainer/install-dev-tools.sh",
+    "postAttachCommand": "sudo bash .devcontainer/post_attach.sh",
     "customizations": {
         "codespaces": {
             "openFiles": []

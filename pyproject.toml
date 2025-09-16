@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "generic_dev_container"
+name = "dev_container_template"
 version = "0.1.0"
-description = "Template for projects involving CUDA and Machine Learning."
-authors = ["David Eakin"]
+description = "Template for projects with dependencies for machine learning problems."
+authors = ["David Eakin <https://github.com/DeeJay-E>"]
 license = "MIT"
 readme = "README.md"
 
@@ -19,6 +19,7 @@ scikit-learn = "^1.5.2"
 pandas = "^2.2.3"
 seaborn = "^0.13.2"
 scipy = "^1.14.1"
+ipykernel = "^6.30.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.8.0"
