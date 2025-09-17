@@ -1,4 +1,6 @@
-FROM nvidia/cuda:12.4.0-devel-ubuntu22.04
+# Use Ubuntu 24.04 with CUDA 12.6 (supports Python 3.12 natively)
+# Note: CUDA 12.4 images for Ubuntu 24.04 may not be available, using 12.6
+FROM nvidia/cuda:12.6.0-devel-ubuntu24.04
 
 ARG USERNAME=developer
 ARG GROUPNAME=$USERNAME

@@ -4,10 +4,11 @@ export DEBIAN_FRONTEND=noninteractive
 # Basic package installation
 # ==========================
 
-echo "Installing basic packages..."
+echo "Installing basic packages for Python 3.12..."
 
 apt-get -y update \
-&& apt-get install -yq curl vim git python3 python3-pip npm \
+&& apt-get install -yq curl vim git python3.12 python3.12-dev python3.12-venv python3-pip npm \
+    software-properties-common wget build-essential \
 && apt-get clean
 
 if [ $? -eq 0 ]; then
@@ -26,6 +27,14 @@ else
     exit 1
 fi
 
+# Create symbolic links for python3.12
+echo "Creating Python 3.12 symbolic links..."
+ln -sf /usr/bin/python3.12 /usr/bin/python3
+ln -sf /usr/bin/python3.12 /usr/bin/python
+
+# Upgrade pip for Python 3.12
+echo "Upgrading pip for Python 3.12..."
+python3.12 -m pip install --upgrade pip
 
 user_name="developer"
 group_name="developer"
@@ -38,9 +47,9 @@ developer_home="/home/$user_name"
 
 poetry_dir=".local/bin"
 poetry_command="$developer_home/$poetry_dir/poetry"
-install_command="curl -sSL https://install.python-poetry.org | python3 -"
+install_command="curl -sSL https://install.python-poetry.org | python3.12 -"
 
-echo "Installing Poetry..."
+echo "Installing Poetry for Python 3.12..."
 
 sudo -u "$user_name" bash -c "$install_command"
 
@@ -58,7 +67,7 @@ echo "Configuring Poetry virtual environments..."
 
 sudo -u "$user_name" "$poetry_command" config virtualenvs.in-project true
 
-echo "Installing repository..."
+echo "Installing repository dependencies..."
 
 sudo -u "$user_name" "$poetry_command" install --with dev --no-root
 

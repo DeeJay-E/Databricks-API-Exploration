@@ -8,6 +8,12 @@ else
 fi
 
 echo ""
+echo "Verifying Python 3.12 installation..."
+python3.12 --version
+python3 --version
+python --version
+
+echo ""
 echo "Adding poetry to path..."
 poetry_path="/home/developer/.local/bin"
 if [ -d "$poetry_path" ] && [[ ":$PATH:" != *":$poetry_path:"* ]]; then
@@ -41,5 +47,9 @@ echo "Logged in as user:"
 whoami
 
 echo ""
-echo "Success - ready to develop!"
+echo "Python and Poetry setup complete!"
+echo "Python version: $(python3.12 --version)"
+echo "Poetry version: $(poetry --version)"
+echo ""
+echo "Success - ready to develop with Python 3.12!"
 echo ""
