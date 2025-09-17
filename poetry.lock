@@ -624,14 +624,14 @@ tests = ["pytest", "pytest-cov", "pytest-xdist"]
 
 [[package]]
 name = "databricks-connect"
-version = "17.2.0"
+version = "17.1.0"
 description = "Databricks Connect Client"
 optional = false
 python-versions = "==3.12.*"
 groups = ["main"]
 markers = "python_version == \"3.12\""
 files = [
-    {file = "databricks_connect-17.2.0-py2.py3-none-any.whl", hash = "sha256:b053646a6b1e9fc29de7dc1abee032b649a92374219e799c6e5edfbb021ea4bf"},
+    {file = "databricks_connect-17.1.0-py2.py3-none-any.whl", hash = "sha256:6b56660086b6232f7cb9cdb3cb7a8ab68f4f007da73d94165f7c16a8bea74564"},
 ]
 
 [package.dependencies]
@@ -4153,4 +4153,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "70bab429966d766040a72497cfbf4b753c48562c362ee0f6c1cdc3e7ae20bdf3"
+content-hash = "edc26675ffa23279a8eb861e1661247c83622d00eb097ed152e6627edd26229a"

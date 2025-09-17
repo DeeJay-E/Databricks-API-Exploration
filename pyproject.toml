@@ -20,7 +20,7 @@ pandas = "^2.2.3"
 seaborn = "^0.13.2"
 scipy = "^1.14.1"
 ipykernel = "^6.30.1"
-databricks-connect = {version = ">=17.2.0", markers = "python_version < \"3.13\""}
+databricks-connect = {version = "==17.1.0", markers = "python_version < \"3.13\""}
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.8.0"
