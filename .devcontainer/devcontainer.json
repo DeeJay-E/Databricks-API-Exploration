@@ -18,6 +18,7 @@
     "onCreateCommand": "sudo bash .devcontainer/configure_environment.sh",
     "updateContentCommand": "sudo bash .devcontainer/install-dev-tools.sh",
     "postAttachCommand": "sudo bash .devcontainer/post_attach.sh",
+    "postStartCommand": "git config --global --add safe.directory ${Databricks-API-Exploration}",
     "customizations": {
         "codespaces": {
             "openFiles": []
