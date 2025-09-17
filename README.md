@@ -5,7 +5,7 @@ This container creates an image ready to use **Python 3.12** with a CUDA-enabled
 ## Features
 
 - **Python 3.12** on Ubuntu 24.04 LTS
-- **CUDA 12.4** support for GPU acceleration
+- **CUDA 12.6** support for GPU acceleration
 - **Poetry** for dependency management
 - Pre-configured development environment with common ML libraries:
   - PyTorch with CUDA support
