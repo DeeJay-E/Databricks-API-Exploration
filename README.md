@@ -32,13 +32,13 @@ This container creates an image ready to use **Python 3.12** with a CUDA-enabled
 
 ## System Requirements
 
-- **GPU**: NVIDIA GPU with CUDA 12.4 support
+- **GPU**: NVIDIA GPU with CUDA 12.6 support
 - **Docker**: Docker Desktop with GPU support enabled
 - **VS Code**: With Dev Containers extension
 
 ## Container Structure
 
-- **Base Image**: `nvidia/cuda:12.4.0-devel-ubuntu24.04`
+- **Base Image**: `nvidia/cuda:12.6.0-devel-ubuntu24.04`
 - **Python Version**: 3.12 (native to Ubuntu 24.04)
 - **Package Manager**: Poetry with virtual environment in project
 - **User**: Non-root `developer` user with sudo access
